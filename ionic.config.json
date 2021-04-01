@@ -1,0 +1,8 @@
+{
+  "name": "cdsa-poweredge-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "746529a8"
+}
