@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService, Message } from '../services/data.service';
+import { Message, DataService } from 'src/app/core/data/services/data.service';
+
 
 @Component({
   selector: 'app-view-message',
