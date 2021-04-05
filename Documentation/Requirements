@@ -1,0 +1,8 @@
+1. Type any text in input field Name Then has to be able to search all macthes and display
+    the results. When no text is wrote shows all Users. 
+    When button Clean is pressed then must reset all inputs to blank.
+2. List Users information in datatable must had all columns
+    When a User row is pressed then system will let Modify or Delete the row.
+    When Create button is pressed must show blank form and only Save button will be enable.
+3. Delete option must erase an User from database and refresh datatable.
+    When  Modify button is pressed will let edit User information such as name, active, and rol.
