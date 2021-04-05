@@ -49,6 +49,11 @@ export class NgxDatatablePage implements OnInit {
   }
 
   loadData() {
+
+    let dataTmp = this.dataTableFacade.getAll(this.objectId);
+
+    console.log(' dataGetALL',dataTmp)
+
     fetch('./assets/data/users.json').then(res => res.json())
       .then(json => {        
         this.dataTableRows = json;        

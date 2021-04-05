@@ -4,7 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./presentation/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+    loadChildren: () => import('./presentation/ngx-datatable/ngx-datatable.module').then( m => m.NgxDatatablePageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./presentation/ngx-datatable/ngx-datatable.module').then( m => m.NgxDatatablePageModule)
   },
   {
     path: '',
@@ -22,7 +26,8 @@ const routes: Routes = [
   {
     path: 'ngx-datatable',
     loadChildren: () => import('./presentation/ngx-datatable/ngx-datatable.module').then( m => m.NgxDatatablePageModule)
-  },  {
+  },
+  {
     path: 'modal-form',
     loadChildren: () => import('./presentation/modals/modal-form/modal-form.module').then( m => m.ModalFormPageModule)
   },

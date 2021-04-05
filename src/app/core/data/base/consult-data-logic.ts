@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Injectable } from "@angular/core";
 import { UsersUsecases } from "../../domain/user/usecases/user/user-usecases";
 
@@ -8,7 +9,7 @@ export class ConsultDataLogic {
 
     constructor(private usersUsecases: UsersUsecases){}
 
-    consult(object: any) {
+    getAll(object: any):Observable<any> {
         let usecases = this.mappingObject(object);
         return usecases.get();
     }
