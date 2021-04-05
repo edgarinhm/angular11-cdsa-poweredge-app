@@ -20,8 +20,7 @@ export class UserWebRepository extends UserRepository {
   }
 
   getUserById(id: number): Observable<UserModel> {
-    return this.http
-      .get<UserDTO>(this.url+'/users/${id}');
+    return this.http.get<UserDTO>(this.url+'/users/${id}');
   }
 
   getAllUsers(): Observable<UserModel> {
@@ -39,10 +38,10 @@ export class UserWebRepository extends UserRepository {
   }
 
   deleteUser(userId: number): Observable<void> {
-    return this.http.delete<void>(`${this.url}/user/${userId}`);
+    return this.http.delete<void>(`${this.url}/users/${userId}`);
   }
 
-  findUserByName(userName: string): Observable<UserModel> {
-    return this.http.delete<UserDTO>(`${this.url}/user/${userName}`);
+  findUserByName(userName: string): Observable<UserModel> {    
+    return this.http.get<UserDTO>(`${this.url}/users/findbyname/${userName}`);
   }
 }

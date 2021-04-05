@@ -1,0 +1,26 @@
+[
+    { 
+     "id": 1 ,
+     "rolid": "1" ,
+     "name": "AAA" ,
+     "active": "Si" 
+    },
+    { 
+    "id": 1 ,
+    "rolid": "1" ,
+    "name": "BBB" ,
+    "active": "Si" 
+    },
+    { 
+    "id": 1 ,
+    "rolid": "1" ,
+    "name": "CCC" ,
+    "active": "Si" 
+    },
+    { 
+    "id": 1 ,
+    "rolid": "1" ,
+    "name": "DDD" ,
+    "active": "Si" 
+    }
+]

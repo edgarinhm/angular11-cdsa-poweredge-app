@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>modal-form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form #myForm>
+    <ion-grid>
+      <ion-row>      
+        <ion-col size-lg="6" size-md="6" size-sm="6" size="12" *ngFor="let formElement of modalFormMetaData; let i = index;">
+          <ion-item >
+            <ion-label position="floating" >{{ formElement.name }}</ion-label>
+            <ion-input type="{{ formElement.type}}" required="{{ formElement.required}}"             
+            name="{{ formElement.prop}}" id="{{ formElement.prop}}" 
+            value="{{findItenByKey(formElement.prop)}}" disabled="{{ formElement.disabled}}" 
+            >
+            </ion-input>
+          </ion-item>
+        </ion-col> 
+      </ion-row>    
+      <ion-row>
+        <ion-col text-center>
+          <ion-button (click)="save(myForm)">Save</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>

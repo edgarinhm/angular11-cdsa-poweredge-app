@@ -9,27 +9,27 @@ import { UserRepository } from "../../model/user-repository";
 export class UsersUsecases {
     constructor(private userRepository: UserRepository) { }
     
-    getUsers(): Observable<UserModel> {
+    get(): Observable<UserModel> {
         return this.userRepository.getAllUsers();
     }
 
-    addUser(params: UserModel): Observable<UserModel> {
+    add(params: UserModel): Observable<UserModel> {
         return this.userRepository.addUser(params);
     }
 
-    updateUser(params: UserModel): Observable<UserModel> {
+    update(params: UserModel): Observable<UserModel> {
         return this.userRepository.updateUser(params);
     }
 
-    deleteUser(userId: number): Observable<void> {
+    delete(userId: number): Observable<void> {
         return this.userRepository.deleteUser(userId);
     }
 
-    findUserByName(userName: string): Observable<UserModel> {
+    findByName(userName: string): Observable<UserModel> {
         return this.userRepository.findUserByName(userName);
     }
     
-    getUserById(userId: number): Observable<UserModel> {
+    getById(userId: number): Observable<UserModel> {
         return this.userRepository.getUserById(userId);
     }
 
