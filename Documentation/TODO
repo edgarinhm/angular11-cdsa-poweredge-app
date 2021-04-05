@@ -1,0 +1,6 @@
+- Manaege and trasnform data betwen facades and api responses
+- Control exceptions backend api
+- Design: add styles to adjust marqgins and colors for table and forms
+- Forms:  create options type select with descriptors and identifiers
+- Create: add property hiddend
+- Delete: refresh datatable
