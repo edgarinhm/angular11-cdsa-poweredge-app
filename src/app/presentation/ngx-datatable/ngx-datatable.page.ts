@@ -82,8 +82,7 @@ export class NgxDatatablePage implements OnInit {
     //this.dataTableRows = dataFound;
   }
 
-  onAddItem(row){
-    console.log(row)
+  onAddItem(){
     let title = "Add User";
     this.openModal(title, 'add');
   }
