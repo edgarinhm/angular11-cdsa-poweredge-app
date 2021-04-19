@@ -5,5 +5,13 @@
 @import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
 
 .action-table-btn-class{
-    --ion-color-primary: #ffffff
+    margin-top: 0;
+}
+
+.action-create-btn-class{
+    --ion-color-primary: #ffffff;
+}
+
+.datatable-margin-left-class > ngx-datatable{
+    margin-left: 10px;
 }

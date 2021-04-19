@@ -7,19 +7,23 @@
         <ion-icon slot="start" name="moon"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-buttons slot ="end">
+    <ion-buttons  slot ="end">
       <ion-button (click)='customRowClass = !customRowClass'>
         <ion-icon slot="icon-only" name="bulb"></ion-icon>
       </ion-button>
-    </ion-buttons>    
-    
+    </ion-buttons>
   </ion-toolbar>
-  <ion-searchbar placeholder="Type to filter data..." (keyup)="updateFilter($event.target.value)"></ion-searchbar>
+  <ion-toolbar>    
+      <ion-searchbar slot ="start" placeholder="Type to filter data..." (keyup)="updateFilter($event.target.value)"></ion-searchbar>    
+      <ion-button  class="ion-hide-sm-down" slot="end"  fill="transparent" data-toggle="modal" data-target="addRowModal" (click)='onAddItem()'>
+        <ion-icon  name="add-circle-outline"></ion-icon>
+      </ion-button>
+  </ion-toolbar>  
   
 </ion-header>
 
 
-<ion-content [fullscreen]="true">
+<ion-content  class="datatable-margin-left-class" [fullscreen]="true">
 
   <ngx-datatable #myTable
   [rows] = "dataTableRows"
@@ -34,22 +38,20 @@
   
   >
 
-  <ngx-datatable-column *ngFor="let column of dataTableColumns; let i = index;" name="{{column.name}}" prop="{{column.prop}}">    
-  </ngx-datatable-column> 
-    
-    <ngx-datatable-column name="Actions" prop="actions" [sortable]="false">
-      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template> 
-        <ion-button class = "action-table-btn-class" data-toggle="modal" data-target="addRowModal" size="small" (click)='onAddItem(row)'>
-          <ion-icon slot="start" name="add-circle-outline"></ion-icon>
-        </ion-button>
-        <ion-button class = "action-table-btn-class" size="small" (click)='onEditItem(row)'>
-          <ion-icon slot="start" name="pencil"></ion-icon>
-        </ion-button>
-        <ion-button class = "action-table-btn-class" size="small" (click)='onDeleteItem(row.id)'>
-          <ion-icon slot="start" name="trash"></ion-icon>
-        </ion-button>
-      </ng-template>
+    <ngx-datatable-column *ngFor="let column of dataTableColumns; let i = index;" name="{{column.name}}" prop="{{column.prop}}">    
     </ngx-datatable-column>
+
+    
+      <ngx-datatable-column  name="Actions" prop="actions" [sortable]="false">
+        <ng-template  let-row="row" let-value="value" ngx-datatable-cell-template>
+          <ion-button class = "action-table-btn-class " fill="transparent" (click)='onEditItem(row)'>
+            <ion-icon slot="start" name="pencil"></ion-icon>
+          </ion-button>
+          <ion-button class = "action-table-btn-class " fill="transparent" (click)='onDeleteItem(row.id)'>
+            <ion-icon slot="start" name="trash"></ion-icon>
+          </ion-button>
+        </ng-template>
+      </ngx-datatable-column>
 
   </ngx-datatable>
   
